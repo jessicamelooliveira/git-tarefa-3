@@ -1,0 +1,39 @@
+Jéssica de Melo Oliveira
+
+mkdir git-tarefa-3
+cd git-tarefa-3/
+git init
+
+echo "Esse eh o conteudo inicial do arquivo 1" > arquivo1.txt
+echo "Esse eh o conteudo inicial do arquivo 2" > arquivo2.txt
+echo "Esse eh o conteudo inicial do arquivo 3" > arquivo3.txt
+git add .
+git commit -m "Commit inicial com 3 arquivos txt"
+
+echo "Essa eh a alteracao do arquivo 1" >> arquivo1.txt
+echo "Essa eh a alteracao do arquivo 2" >> arquivo2.txt
+git status
+git diff
+git add .
+git commit -m "Alteracoes feitas nos arquivos 1 e 2"
+
+git log
+git log --oneline
+git log --graph --stat
+
+git revert HEAD
+
+echo "Essa eh a modificacao temporaria no arquivo 3" >> arquivo3.txt
+git stash push -m "Alteracao temporaria no arquivo 3"
+git stash list
+git checkout -b nova-feature
+echo "Estou em outra linha de desenvolvimento" > arquivo4.txt
+git add arquivo4.txt
+git commit -m "Estou em outra linha de desenvolvimento"
+git checkout master
+git stash pop
+
+git reflog
+git tag -a v1.0 -m "Versao estavel inicial" cc2c9ad
+
+# Arquivo comandos.txt criado e editado com cat <<EOF
