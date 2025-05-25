@@ -37,3 +37,12 @@ git reflog
 git tag -a v1.0 -m "Versao estavel inicial" cc2c9ad
 
 # Arquivo comandos.txt criado e editado com cat <<EOF
+
+git add comandos.txt
+git commit -m "Arquivo txt com lista de comandos adicionado"
+
+git remote add origin https://github.com/jessicamelooliveira/git-tarefa-3.git
+git push -u origin master
+git push -u origin v1.0
+
+# Adição dos últimos comandos após a criação do comandos.txt (linha 39) no arquivo comandos.txt
